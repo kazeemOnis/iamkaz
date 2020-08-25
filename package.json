@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/kazeemOnis/iamkaz/issues"
   },
-  "homepage": "https://github.com/kazeemOnis/iamkaz#readme"
+  "homepage": "https://github.com/kazeemOnis/iamkaz#readme",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-vue": "^6.2.2"
+  }
 }
