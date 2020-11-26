@@ -1,4 +1,16 @@
-// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-//
-// The variables you want to modify
-// $font-size-root: 20px;
+$spacing: 15px;
+$primary: #000826;
+$secondary: #F28C18;
+$alternate: #707070;
+$icon: #585858;
+$deleteRed: #f53649;
+$acceptGreen: #23d160;
+$bg-height: 98vh;
+// mobile
+$bp-mob: 320px;
+// tablet
+$bp-tab: 768px;
+// desktop
+$bp-dsk: 1024px;
+// fullhd
+$bp-fhd: 1440px;
