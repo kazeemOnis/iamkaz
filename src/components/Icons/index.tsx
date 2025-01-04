@@ -24,7 +24,7 @@ export const Arrow = (props: SVGProps<SVGSVGElement>) => {
   )
 } 
 
-export const Linkedin = (props: SVGProps<SVGSVGElement>) => (
+export const Linkedin = () => (
   <svg
     width="24"
     height="24"
@@ -39,7 +39,7 @@ export const Linkedin = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-export const GitHub = (props: SVGProps<SVGSVGElement>) => (
+export const GitHub = () => (
   <svg 
     width="20" 
     height="20" 
@@ -60,7 +60,7 @@ export const GitHub = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-export const ArrowRise = (props: SVGProps<SVGSVGElement>) => (
+export const ArrowRise = () => (
   <svg 
     width="20"
     height="20"
@@ -120,7 +120,7 @@ export const Share = (props: SVGProps<SVGSVGElement>) => {
   const fillColor = isDarkMode ? '#FFFFFF' : '#121415';
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_127_49)">
+      <g clipPath="url(#clip0_127_49)">
         <path
           d="M21.1373 22.251H1.63727V7.25098H7.67477L9.19202 5.78998L9.15302 5.75098H1.63727C0.808518 5.75098 0.137268 6.42298 0.137268 7.25098V22.251C0.137268 23.0797 0.808518 23.751 1.63727 23.751H21.1373C21.966 23.751 22.6373 23.0797 22.6373 22.251V10.5165L21.1373 11.9482V22.251ZM6.33152 16.251H7.84277C8.89427 10.2862 14.0895 5.75098 20.3558 5.75098C20.619 5.75098 20.868 5.75323 21.12 5.75473L18.372 8.50273C18.0795 8.79523 18.0795 9.27074 18.372 9.56324C18.5183 9.71024 18.711 9.78298 18.903 9.78298C19.095 9.78298 19.2863 9.70949 19.4325 9.56324L23.8628 5.01598L19.4325 0.467984C19.14 0.174734 18.6653 0.174734 18.372 0.467984C18.0795 0.761234 18.0795 1.23598 18.372 1.52848L21.0953 4.25098C20.8598 4.25098 20.6273 4.24948 20.3873 4.24948C13.2848 4.24948 7.41302 9.45224 6.33152 16.251Z"
           fill={props.fill || fillColor}
@@ -141,7 +141,7 @@ export const ChevronUp = (props: SVGProps<SVGSVGElement>) => {
   const alternateColor = isDarkMode ? '#121415' : '#FFFFFF';
   return (
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_127_51)">
+      <g clipPath="url(#clip0_127_51)">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"

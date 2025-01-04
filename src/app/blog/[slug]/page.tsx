@@ -1,11 +1,14 @@
+'use client'
+
+import { useRouter } from 'next/router';
 import { Header } from "@/components/Header";
 import { Share } from "@/components/Icons";
 import blog from '../../../../public/json/blogs.json';
 import ScrollToTop from "@/components/ScrollToTop";
 
-export default async function Blog({ params }: { params: { slug: string }}) {
-  const { slug } = await Promise.resolve(params); 
-
+export default function Blog() {
+  const router = useRouter()
+  const {slug} = router.query
   const post = blog.find((post) => post.slug === slug);
 
   if (!post) {
@@ -15,26 +18,39 @@ export default async function Blog({ params }: { params: { slug: string }}) {
       </div>
     );
   }
+
+
   return (
     <main className="page">
       <div className="page__content">
         <Header title={post.title} link="/blog" />
         <section>
           <div
-            dangerouslySetInnerHTML={{ __html: post.content }}
             className="blog"
+            dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </section>
         <div className="share">
-          <p>Enjoyed this post, please kindly share</p>
-          <a href={`https://twitter.com/intent/tweet?url=https://iam-kaz/blog/${post.slug}&text=${post.title + ' by @iam_kaz'}`} target="_blank" rel="noreferrer">
-          <Share /> <span>Twitter</span>
+          <p>Enjoyed this post? Please kindly share:</p>
+          <a
+            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://iam-kaz/blog/${post.slug}`)}&text=${encodeURIComponent(`${post.title} by @iam_kaz`)}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Share /> <span>Twitter</span>
           </a>
-          <a href={`https://www.facebook.com/sharer.php?u=https://iam-kaz/blog/${post.slug}`} target="_blank" rel="noreferrer">
-          <Share /> <span>Facebook</span>
+          <a
+            href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(`https://iam-kaz/blog/${post.slug}`)}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Share /> <span>Facebook</span>
           </a>
-          <a href={`whatsapp://send?text=${post.title + ' ' + `https://iam-kaz/blog/${post.slug}`}`} data-action="share/whatsapp/share">
-          <Share /> <span>WhatsApp</span>
+          <a
+            href={`whatsapp://send?text=${encodeURIComponent(`${post.title} https://iam-kaz/blog/${post.slug}`)}`}
+            data-action="share/whatsapp/share"
+          >
+            <Share /> <span>WhatsApp</span>
           </a>
         </div>
       </div>
