@@ -35,7 +35,7 @@ export default function Contact() {
       <div className="page__content">
         <Header title="Get in Touch" link="/" />
         <section>
-          {/* <p className="contact">I'm always open to connecting on <b>exciting projects</b> or <b>exploring new opportunities</b>. Have an idea or a project in mind? <b>Get in touch</b>, and let's <b>make it happen</b>.</p> */}
+          <p className="contact">I`m always open to connecting on <b>exciting projects</b> or <b>exploring new opportunities</b>. Have an idea or a project in mind? <b>Get in touch</b>, and let&apos;s <b>make it happen</b>.</p>
           <div className="thumbnail">
             <Image 
               src={thumbnail}
