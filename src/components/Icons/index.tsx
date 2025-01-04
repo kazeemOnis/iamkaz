@@ -24,7 +24,7 @@ export const Arrow = (props: SVGProps<SVGSVGElement>) => {
   )
 } 
 
-export const Linkedin = (props: SVGProps<SVGSVGElement>) => (
+export const Linkedin = () => (
   <svg
     width="24"
     height="24"
@@ -39,7 +39,7 @@ export const Linkedin = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-export const GitHub = (props: SVGProps<SVGSVGElement>) => (
+export const GitHub = () => (
   <svg 
     width="20" 
     height="20" 
@@ -60,7 +60,7 @@ export const GitHub = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-export const ArrowRise = (props: SVGProps<SVGSVGElement>) => (
+export const ArrowRise = () => (
   <svg 
     width="20"
     height="20"
