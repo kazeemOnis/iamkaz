@@ -1,14 +1,15 @@
 'use client'
 
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation'
 import { Header } from "@/components/Header";
 import { Share } from "@/components/Icons";
 import blog from '../../../../public/json/blogs.json';
 import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Blog() {
-  const router = useRouter()
-  const {slug} = router.query
+  const pathname = usePathname()
+  const match = pathname.match(/\/blog\/([^/]+)/);
+  const slug = match ? match[1] : null;
   const post = blog.find((post) => post.slug === slug);
 
   if (!post) {
