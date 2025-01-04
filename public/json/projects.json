@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "THG",
+    "url": "https://www.thg.com/",
+    "createdAt": "2024-06-01T00:00:00.00Z",
+    "type": "app",
+    "isJob": true,
+    "description": "Senior mobile developer at The Hut Group, leading the platform and development team to build and maintain critical features of the app.",
+    "iOSUrl": "https://apps.apple.com/gb/developer/the-hut-com-ltd/id383713487?see-all=i-phonei-pad-apps",
+    "androidUrl": "https://play.google.com/store/apps/developer?id=THG+%28The+Hut+Group%29&hl=en",
+    "tags": "React, React Native, Kotlin, Swift, TypeScript"
+  },
+  {
+    "id": 2,
+    "title": "Tix.africa",
+    "url": "https://tix.africa/",
+    "createdAt": "2024-06-01T00:00:00.00Z",
+    "type": "web",
+    "isJob": true,
+    "description": "Previously front-end lead, responsible for maintaining all front end repositories.",
+    "iOSUrl": "https://apps.apple.com/ro/app/tix-africa/id1513743943",
+    "androidUrl": null,
+    "tags": "VueJS, React Native, Kotlin, Swift"
+  },
+  {
+    "id": 3,
+    "title": "Auto Konnect Website",
+    "url": "https://www.autokonnect.com.ng/",
+    "createdAt": "2024-06-01T00:00:00.00Z",
+    "type": "web",
+    "isJob": false,
+    "description": "Designed and built a website and mobile app to connect auto professionals with vehicle owners.",
+    "iOSUrl": null,
+    "androidUrl": null,
+    "tags": "React, NextJS, NodeJS, TypeScript"
+  },
+  {
+    "id": 4,
+    "title": "Sonamie",
+    "url": "https://sonamie.com",
+    "createdAt": "2024-06-01T00:00:00.00Z",
+    "type": "web",
+    "isJob": false,
+    "description": "Previously designed and built an e-commerce site and CMS for Sonamie Fashion Brand.",
+    "iOSUrl": null,
+    "androidUrl": null,
+    "tags": "React, NextJS, NodeJS, TypeScript"
+  },
+  {
+    "id": 5,
+    "title": "Amuj",
+    "url": "https://www.amujofficial.com/",
+    "createdAt": "2024-06-01T00:00:00.00Z",
+    "type": "web",
+    "isJob": false,
+    "description": "Previously designed and built an e-commerce site and CMS for Amuj Fashion Brand.",
+    "iOSUrl": null,
+    "androidUrl": null,
+    "tags": "React, NextJS, NodeJS, TypeScript"
+  },
+  {
+    "id": 6,
+    "title": "Auto Konnect App",
+    "url": "https://www.autokonnect.com.ng/",
+    "createdAt": "2024-06-01T00:00:00.00Z",
+    "type": "app",
+    "isJob": false,
+    "description": "Designed and built a website and mobile app to connect auto professionals with vehicle owners.",
+    "iOSUrl": null,
+    "androidUrl": "https://play.google.com/store/apps/details?id=com.autokonnect&hl=en",
+    "tags": "React Native, Kotlin, Swift, TypeScript"
+  }
+]

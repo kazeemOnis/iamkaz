@@ -1,0 +1,184 @@
+@use './blog.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #121415;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121415;
+    --foreground: #ffffff;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  padding: 8rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    font-weight: 700;
+    color: inherit;
+  }
+
+  h1.heading {
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 2rem;
+  }
+
+  div.mini__heading {
+    display: flex;
+    align-items: baseline;
+    font-size: 32px;
+    margin-bottom: 2rem;
+
+    h1 {
+      display: block;
+    }
+
+    svg {
+      vertical-align: middle;
+      display: inline;
+      margin-right: 16px;
+      margin-bottom: 1px;
+    }
+  }
+
+  p.contact {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .thumbnail {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-end;
+
+    &__icon {
+      position: absolute;
+      margin-left: 90px;
+      margin-bottom: 15px;
+
+      p {
+        position: absolute;
+        bottom: 2px;
+        left: 80px;
+        color: white;
+      }
+    }
+  }
+
+  &__sub-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__links, &__socials {
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+
+      svg {
+        margin-right: 8px;
+      }
+    }
+    a:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__socials {
+    a {
+      color: #737373;
+    }
+  }
+
+  &__block {
+    display: block;
+
+    .flex {
+      a:last-child {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &__block:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 4px;
+      font-size: 24px;
+    }
+  }
+
+  &__subtext {
+    color: #737373;
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    padding: 4rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 2rem 1.5rem 3rem 1.5rem;
+    
+    h1.heading {
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 4rem;
+    }
+
+    &__sub-content {
+      flex-direction: column;
+    }
+
+    &__links {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+
+
