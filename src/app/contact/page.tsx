@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { Header } from "@/components/Header";
 import { Arrow, ArrowCurl } from "@/components/Icons";
-import thumbnail from '../../../public/img/thumbnail.jpg';
+import thumbnail from '../../../public/img/thumbnail.jpeg';
 
 export const metadata: Metadata = {
   title: "Contact Kaz | Let's Connect",
