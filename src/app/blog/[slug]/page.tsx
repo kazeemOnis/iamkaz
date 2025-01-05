@@ -23,14 +23,14 @@ export async function generateMetadata(
     openGraph: {
       title: post?.title,
       description: post?.description || post?.content.slice(0, 160),
-      images: ['https://res.cloudinary.com/iam-kaz/image/upload/v1696200621/thumbnail_thumbnail_IMG_3236_cea0cbe13a.jpg', ...previousImages],
+      images: [post?.image ? post.image : 'https://res.cloudinary.com/iam-kaz/image/upload/v1696200621/thumbnail_thumbnail_IMG_3236_cea0cbe13a.jpg', ...previousImages],
       siteName: 'Kaz Portfolio',
     },
     twitter: {
       card: 'summary_large_image',
       title: post?.title,
       description: post?.description || post?.content.slice(0, 160),
-      images: ['https://res.cloudinary.com/iam-kaz/image/upload/v1696200621/thumbnail_thumbnail_IMG_3236_cea0cbe13a.jpg'],
+      images: [post?.image ? post.image : 'https://res.cloudinary.com/iam-kaz/image/upload/v1696200621/thumbnail_thumbnail_IMG_3236_cea0cbe13a.jpg'],
     },
   }
 }
