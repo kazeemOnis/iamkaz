@@ -1,15 +1,44 @@
-'use client'
-
-import { usePathname } from 'next/navigation'
+import type { Metadata, ResolvingMetadata } from 'next'
 import { Header } from "@/components/Header";
 import { Share } from "@/components/Icons";
 import blog from '../../../../public/json/blogs.json';
 import ScrollToTop from "@/components/ScrollToTop";
 
-export default function Blog() {
-  const pathname = usePathname()
-  const match = pathname.match(/\/blog\/([^/]+)/);
-  const slug = match ? match[1] : null;
+type Props = {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = (await params).slug
+  const post = blog.find((post) => post.slug === slug);
+  const previousImages = (await parent).openGraph?.images || []
+ 
+  return {
+    title: post?.title,
+    description: post?.description || post?.content.slice(0, 160),
+    openGraph: {
+      title: post?.title,
+      description: post?.description || post?.content.slice(0, 160),
+      images: ['https://res.cloudinary.com/iam-kaz/image/upload/v1696200621/thumbnail_thumbnail_IMG_3236_cea0cbe13a.jpg', ...previousImages],
+      siteName: 'Kaz Portfolio',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post?.title,
+      description: post?.description || post?.content.slice(0, 160),
+      images: ['https://res.cloudinary.com/iam-kaz/image/upload/v1696200621/thumbnail_thumbnail_IMG_3236_cea0cbe13a.jpg'],
+    },
+  }
+}
+
+export default async function Page({params}: {
+  params: Promise<{ slug: string }>
+}) {
+  const slug = (await params).slug
   const post = blog.find((post) => post.slug === slug);
 
   if (!post) {
