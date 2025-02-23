@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://iam-kaz.com';
@@ -13,13 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 }
 
 function getBlogSitemapUrls(baseUrl: string) {
-  const blogPosts = [
-    { slug: 'create-react-native-app-icon', lastModified: '2025-02-23' },
-    { slug: 'create-custom-fonts', lastModified: '2025-02-23' },
-  ];
+  const filePath = path.join(process.cwd(), 'public', 'json', 'blogs.json');
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const blogPosts = JSON.parse(fileContents);
 
-  return blogPosts.map((post) => ({
+  return blogPosts.map((post: { slug: string; createdAt: string }) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.lastModified,
+    lastModified: post.createdAt,
   }));
 }
