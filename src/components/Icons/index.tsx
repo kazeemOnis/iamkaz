@@ -143,8 +143,8 @@ export const ChevronUp = (props: SVGProps<SVGSVGElement>) => {
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_127_51)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M49.072 41.0801C48.29 41.8601 47.024 41.8601 46.242 41.0801L32 26.8201L17.758 41.0801C16.976 41.8601 15.71 41.8601 14.928 41.0801C14.148 40.3001 14.148 39.02 14.928 38.24L30.242 22.9199C30.722 22.4399 31.378 22.2999 32 22.4199C32.622 22.2999 33.278 22.4399 33.758 22.9199L49.072 38.24C49.852 39.02 49.852 40.3001 49.072 41.0801ZM32 0C14.328 0 0 14.32 0 32C0 49.68 14.328 64 32 64C49.672 64 64 49.68 64 32C64 14.32 49.672 0 32 0Z"
           fill={props.fill || fillColor}
         />
