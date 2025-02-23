@@ -14,8 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 function getBlogSitemapUrls(baseUrl: string) {
   const blogPosts = [
-    { slug: 'create-app-icon', lastModified: '2024-01-01' },
-    { slug: 'create-custom-fonts', lastModified: '2024-01-10' },
+    { slug: 'create-react-native-app-icon', lastModified: '2025-02-23' },
+    { slug: 'create-custom-fonts', lastModified: '2025-02-23' },
   ];
 
   return blogPosts.map((post) => ({
