@@ -48,21 +48,21 @@ const ShareLinks = ({ slug, title }: { slug: string; title: string }) => (
   <div className="share">
     <p>Enjoyed this post? Please kindly share:</p>
     <a
-      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://iam-kaz.com/blog/${slug}`)}&text=${encodeURIComponent(`${title} by @iam_kaz`)}`}
+      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://iam-kaz.com/blog/${slug}?utm_source=twitter&utm_medium=social`)}&text=${encodeURIComponent(`${title} by @iam_kaz`)}`}
       target="_blank"
       rel="noreferrer"
     >
-      <Share /> <span>Twitter</span>
+      <Share /> <span>X</span>
     </a>
     <a
-      href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(`https://iam-kaz.com/blog/${slug}`)}`}
+      href={`https://www.facebook.com/sharer.php?u=${encodeURIComponent(`https://iam-kaz.com/blog/${slug}?utm_source=facebook&utm_medium=social`)}`}
       target="_blank"
       rel="noreferrer"
     >
       <Share /> <span>Facebook</span>
     </a>
     <a
-      href={`whatsapp://send?text=${encodeURIComponent(`${title} https://iam-kaz.com/blog/${slug}`)}`}
+      href={`whatsapp://send?text=${encodeURIComponent(`${title} https://iam-kaz.com/blog/${slug}?utm_source=whatsapp&utm_medium=social`)}`}
       data-action="share/whatsapp/share"
     >
       <Share /> <span>WhatsApp</span>
